@@ -7,19 +7,19 @@ assignees: fshahinfar1
 
 ---
 
-Team Name: `[FILL HERE]`
+Team Name: `97110285-97101286`
 
-Student Name of member 1: `[FILL HERE]`
-Student No. of member 1: `[FILL HERE]`
+Student Name of member 1: `Mohammadreza Abdi`
+Student No. of member 1: `97110285`
 
-Student Name of member 2: `[FILL HERE]`
-Student No. of member 2: `[FILL HERE]`
+Student Name of member 2: `Alireza Ilami`
+Student No. of member 2: `97101286`
 
-- [ ] Read Session Contents.
+- [x] Read Session Contents.
 
 ### Section 3.3.1
-- [ ] Investigate the /proc/ directory
-    1. [ ] `[FILL HERE with an image of files in /proc/ directories. Use ls command.]`
+- [x] Investigate the /proc/ directory
+    1. [x] ![image](https://user-images.githubusercontent.com/45389577/127737564-bdf72e45-7d14-496a-a002-23ee4577b47b.png)
 
 ### Section 3.3.2
 
