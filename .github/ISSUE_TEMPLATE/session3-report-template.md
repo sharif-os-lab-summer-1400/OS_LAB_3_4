@@ -24,7 +24,7 @@ Student No. of member 2: `97101286`
 ### Section 3.3.2
 
 - [ ] Do 5 subtasks from 1 to 5:
-    1. [ ] `[FILL HERE with the content of /proc/version. Use cat command.]`
+    1. [x] ![image](https://user-images.githubusercontent.com/45389577/127737698-699a0dcf-bb32-44f6-9123-28c5d26e0434.png)
     1. [ ] `[FILL HERE with the content of two files with non-numeric name other thatn /proc/version.]`
     1. [ ] `[FILL HERE with the program you write for this part (see experiment guide for information).]`
     1. [ ] `[FILL HERE with screen capture from your programs execution.]`
