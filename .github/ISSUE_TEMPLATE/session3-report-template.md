@@ -25,10 +25,13 @@ Student No. of member 2: `97101286`
 
 - [ ] Do 5 subtasks from 1 to 5:
     1. [x] ![image](https://user-images.githubusercontent.com/45389577/127737698-699a0dcf-bb32-44f6-9123-28c5d26e0434.png)
-    1. [ ] `[FILL HERE with the content of two files with non-numeric name other thatn /proc/version.]`
-    1. [ ] `[FILL HERE with the program you write for this part (see experiment guide for information).]`
-    1. [ ] `[FILL HERE with screen capture from your programs execution.]`
-    1. [ ] `[FILL HERE with description about, what happens if you try to write a sentence in to /proc/version.]`
+        در اینجا ورژن هسته لینوکس، نام کاربری که آن را نصب کرده است، ورژن جی سی سی، نسخه دبینی که جی سی سی روی آن نصب شده است، و زمان کامپایل کرنل لینوکس را میتوان دید.
+    2. [ ] ![image](https://user-images.githubusercontent.com/45389577/127744249-8400d791-efdd-418b-86d7-5af625cc2a16.png)
+            proc/partitions:    Partitioned devices are listed in dir: /dev/ . In proc/partitions we have their information such as major and minor number which are related to devicetype and identification number. And also their number of blocks.
+            proc/uptime:    It shows two numbers. The first one is the total seconds that the machine is on since its last poweroff/reboot. The second number is the total time that all cores have spent the idle process. It can be greater than the first number with multiple cores.
+    3. [ ] `[FILL HERE with the program you write for this part (see experiment guide for information).]`
+    4. [ ] `[FILL HERE with screen capture from your programs execution.]`
+    5. [ ] `[FILL HERE with description about, what happens if you try to write a sentence in to /proc/version.]`
 
 ## Section 3.3.3
 
