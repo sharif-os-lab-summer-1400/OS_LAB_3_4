@@ -31,7 +31,7 @@ Student No. of member 2: `97101286`
             proc/uptime:    It shows two numbers. The first one is the total seconds that the machine is on since its last poweroff/reboot. The second number is the total time that all cores have spent the idle process. It can be greater than the first number with multiple cores.
     3. [ ] `[FILL HERE with the program you write for this part (see experiment guide for information).]`
     4. [ ] `[FILL HERE with screen capture from your programs execution.]`
-    5. [ ] `[FILL HERE with description about, what happens if you try to write a sentence in to /proc/version.]`
+    5. [ ] `Permission denied. We do not have the "Write" access for this file. Only root user can write on this file.`
 
 ## Section 3.3.3
 
