@@ -97,10 +97,38 @@ int main(){
     else
     را.
     
-    </div
+    </div>
 
-- [ ] Program showing that memory of the parent and the child is seperate
-    1. [ ] `[FILL HERE with your source code]`
+- [x] Program showing that memory of the parent and the child is seperate
+    
+    ```c
+    #include <stdio.h>
+    #include <sys/wait.h>
+    #include <unistd.h>
+    int main() {
+        int ret = fork();
+        int tmp = 0;
+        if (ret == 0) {
+                printf("tmp value 1 in child process: %d\n", tmp);
+                tmp += 10;
+                printf("tmp value 2 in child process: %d\n", tmp);
+                return 23;
+        } else {
+                int rc = 0;
+                wait(&rc);
+                printf("tmp value 1 in parent process: %d\n", tmp);
+                tmp += 10;
+                printf("tmp value 2 in parent process: %d\n", tmp);
+                printf("return code is %d\n", WEXITSTATUS(rc));
+        }
+        return 0;
+    }
+    ```
+   <div dir="rtl">
+   دقت کنید که در تابع بالا، مقدار تغییر یافته در متغیر
+    tmp
+     بعد از اجرای پردازه فرزند، در پردازه پدر قابل مشاهده نمی باشد، چرا پشته ی پردازه های پدر و فرزند مستقل از یک دیگر هستند.
+   </div>
 
 - [ ] Program printing different messages for parent and child process
     1. [ ] `[FILL HERE with your source code]`
