@@ -52,7 +52,7 @@ int main(){
 
 
 - [x] Program using getppid
-    1. [x] 
+
     ```c 
     #include <stdio.h>
     #include <unistd.h>
@@ -62,20 +62,42 @@ int main(){
        return 0;
     }
     ```
-    1. [x] 
     <div dir="rtl">
    
-   .می باشد bash پردازه پدر
+   پردازه پدر
+   bash
+   می باشد.
+   این پردازه همان ترمینال می باشد و دستوراتی را که کاربر در آن وارد می کند، اجرا می کند.
+   از آن جایی که دستوری کامپایل و اجرای کد در
+   bash 
+   اجرا شده، بنابراین پردازه پدر همان 
+   bash
+   خواهد بود.     
    
-   .این پردازه همان ترمینال می باشد و دستوراتی را که کاربر در آن وارد می کند، اجرا می کند
-   
-   .خواهد بود bash اجرا شده، بنابراین پردازه پدر همان bash از آن جایی که دستوری کامپایل و اجرای کد در 
-   </div>
+    </div>
     
-   1. [x] ![image](https://user-images.githubusercontent.com/45341111/128375348-d30122e8-f6ee-425a-bc99-fc3a3492faec.png)
+   ![image](https://user-images.githubusercontent.com/45341111/128375348-d30122e8-f6ee-425a-bc99-fc3a3492faec.png)
 
-- [ ] Describe the C program (fork program)
-    1. [ ] `[FILL HERE with descriptions]`
+- [x] Describe the C program (fork program)
+    <div dir="rtl">
+    
+    در این کد، ابتدا از پردازه اصلی برنامه یک پردازه فرزند ساخته می شود.
+    پردازه پدر منتظر پردازه فرزند می ماند تا آن اتمام یابد.
+     پردازه فرزند مقدار 23 را برمی گرداند. سپس پردازه پدر این مقدار را دریافت می کند و در خروجی چاپ می کند.
+    دقت کنید که بعد از تابع
+    fork
+    مقدار
+    ret
+    برای پردازه پدر برابر با
+    pid
+    فرزند و برای پردازه فرزند برابر با 0 می باشد.
+    لذا پردازه اول کد داخل 
+    if
+    را اجرا می کند و پردازه پدر کد داخل
+    else
+    را.
+    
+    </div
 
 - [ ] Program showing that memory of the parent and the child is seperate
     1. [ ] `[FILL HERE with your source code]`
