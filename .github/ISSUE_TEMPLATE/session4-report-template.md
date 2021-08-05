@@ -19,11 +19,15 @@ Student No. of member 2: `97101286`
 
 ### Section 4.4.1
 - [x] Investigate the ps command
+    
     1. [x] `[FILL HERE with an image of ps command showing running processes.]`    
+    
     ![image](https://user-images.githubusercontent.com/45341111/128358902-9bf2cbe6-f853-4459-a79d-8af64f3a97a0.png)
     
 - [x] Infromation about processes with PID = 1
+    
     1. [X] `[FILL HERE with description.]`    
+    
     <div dir="rtl">
     
     پردازه systemd یا init، اولین پردازه ساخته شده در لینوکس می باشد
@@ -32,27 +36,31 @@ Student No. of member 2: `97101286`
     همچنین این پردازه سرویس هایی برای راه اندازی و مدیریت فضای کاربر در هنگام بوت شدن سیستم شروع می کند.  
     
     هنگام بوت شدن سیستم عامل، مولفه های این پردازه از چندین فایل متنی ساخته می شود
-     (/etc/systemd/system به عنوان مثال در مسیر) 
+     (به عنوان مثال در مسیر /etc/systemd/system) 
     سپس این پردازه شروع به بالا آوردن سرویس ها و پردازه های دیگر می کند
     </div>
 
 - [x] Program using getpid
+    
     1. [x] `[FILL HERE with your program code.]`
-```c 
-#include <stdio.h>
-#include <unistd.h>
+    
+    ```c 
+    #include <stdio.h>
+    #include <unistd.h>
 
-int main(){
-   printf("current process id: %d\n", getpid());
-   return 0;
-}
-```
+    int main(){
+       printf("current process id: %d\n", getpid());
+       return 0;
+    }
+    ```
 
 ### Section 4.4.2
 
 
 - [x] Program using getppid
+    
     1. [x] `[FILL HERE with your program code.]`
+    
     ```c 
     #include <stdio.h>
     #include <unistd.h>
@@ -63,24 +71,29 @@ int main(){
     }
     ```
     1. [x] `[FILL HERE with descriptions about the parent process]`
+    
     <div dir="rtl">
-   
-   پردازه پدر
-   bash
-   می باشد.
-   این پردازه همان ترمینال می باشد و دستوراتی را که کاربر در آن وارد می کند، اجرا می کند.
-   از آن جایی که دستوری کامپایل و اجرای کد در
-   bash 
-   اجرا شده، بنابراین پردازه پدر همان 
-   bash
-   خواهد بود.     
-   
+
+    پردازه پدر
+    bash
+    می باشد.
+    این پردازه همان ترمینال می باشد و دستوراتی را که کاربر در آن وارد می کند، اجرا می کند.
+    از آن جایی که دستوری کامپایل و اجرای کد در
+    bash 
+    اجرا شده، بنابراین پردازه پدر همان 
+    bash
+    خواهد بود.     
+
     </div>
-     1. [x] `[FILL HERE with an image of the program execution]`   
-   ![image](https://user-images.githubusercontent.com/45341111/128375348-d30122e8-f6ee-425a-bc99-fc3a3492faec.png)
+     
+    1. [x] `[FILL HERE with an image of the program execution]`   
+    
+    ![image](https://user-images.githubusercontent.com/45341111/128375348-d30122e8-f6ee-425a-bc99-fc3a3492faec.png)
 
 - [x] Describe the C program (fork program)
+    
     1. [x] `[FILL HERE with descriptions]`
+    
     <div dir="rtl">
     
     در این کد، ابتدا از پردازه اصلی برنامه یک پردازه فرزند ساخته می شود.
@@ -102,7 +115,9 @@ int main(){
     </div>
 
 - [x] Program showing that memory of the parent and the child is seperate
+    
     1. [x] `[FILL HERE with your source code]`  
+    
     ```c
     #include <stdio.h>
     #include <sys/wait.h>
@@ -126,6 +141,7 @@ int main(){
         return 0;
     }
     ```
+   
    <div dir="rtl">
    دقت کنید که در تابع بالا، مقدار تغییر یافته در متغیر
     tmp
@@ -133,7 +149,9 @@ int main(){
    </div>
 
 - [x] Program printing different messages for parent and child process
+    
     1. [x] `[FILL HERE with your source code]`    
+    
     ```c
     include <stdio.h>
     #include <sys/wait.h>
@@ -154,7 +172,9 @@ int main(){
     ```
 
 - [x] Program for the last task of this section
+    
     1. [x] `[FILL HERE with your source code]`    
+    
     ```c
     #include <stdio.h>
     #include <sys/wait.h>
@@ -170,6 +190,7 @@ int main(){
     }
     ```
     1. [x] `[FILL HERE with you description of the output`]
+    
     ![image](https://user-images.githubusercontent.com/45341111/128392132-e29c5b67-17bc-4edc-a247-b934a9d9899e.png)
     
     <div dir="rtl">
@@ -194,7 +215,9 @@ int main(){
 ## Section 4.4.3
 
 - [x] Program using `wait` and counting from 1 to 100
-     1. [x] `[FILL HERE with your source code]`  
+     
+    1. [x] `[FILL HERE with your source code]`  
+    
     ```c
     #include <stdio.h>
     #include <sys/wait.h>
@@ -214,6 +237,7 @@ int main(){
     }
     ```
     1. [x] `[FILL HERE about description for the parameter of wait system call]`    
+   
    <div dir="rtl">
    پارامتر اول تابع
     wait
@@ -231,7 +255,9 @@ int main(){
    </div>
 
 - [x] Program showing process adoption
+    
     1. [x] `[FILL HERE with your source code]`    
+    
     ```c
     #include <stdio.h>
     #include <sys/wait.h>
@@ -253,23 +279,29 @@ int main(){
     }
     ```
     1. [x] `[FILL HERE an image from execution of your program]`    
+    
     ![image](https://user-images.githubusercontent.com/45341111/128388086-5e1e93fe-afca-4c0b-a5fe-4e395f20093c.png)
 
 ### Section 4.4.4
 
 - [x] Describe following commands/APIs:
+    
     1. `[FILL HERE with description about execv]`
+    
     ```c 
     int execv(const char *path, char *const argv[]);
     ```
+    
     <div dir="rtl">
      این دستور آدرس برنامه و لیستی از آرگومان های ورودی (در قالب رشته) را گرفته و آن برنامه را اجرا می کند.
     </div>
 
     1. `[FILL HERE with description about execl]`
+    
     ```c 
     int execl(const char *path, const char *arg, ...);
     ```
+    
     <div dir="rtl">
     این دستور دقیقا همانند
     execv
@@ -277,9 +309,11 @@ int main(){
     </div>
     
     1. `[FILL HERE with description about execvp]`
+    
     ```c 
     int execvp (const char *filename, char *const argv[]);
     ```
+    
     <div dir="rtl">
     این دستور دقیقا همانند
     execv
@@ -295,9 +329,11 @@ int main(){
     </div>
     
     1. `[FILL HERE with description about execlp]`
+    
     ```c 
     int execlp (const char *filename, const char *arg, ...);
     ```
+    
     <div dir="rtl">
     این دستور دقیقا همانند
     execvp
@@ -305,7 +341,9 @@ int main(){
     </div>
 
 - [x] Program which forks and executues `ls` command
+    
     1. [x] `[FILL HERE with your source code]`    
+    
     ```c
     #include <stdio.h>
     #include <sys/wait.h>
@@ -321,6 +359,7 @@ int main(){
     }
     ```
     1. [x] `[FILL HERE an image from execution of your program]`
+    
     ![image](https://user-images.githubusercontent.com/45341111/128397572-306ab082-a7e2-49d6-bf3c-af9acac6d77b.png)
 
 ## Source Code Submission
