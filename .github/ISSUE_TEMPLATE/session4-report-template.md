@@ -7,25 +7,40 @@ assignees: fshahinfar1
 
 ---
 
-Team Name: `[FILL HERE]`
+Team Name: `97110285-97101286`
 
-Student Name of member 1: `[FILL HERE]`
-Student No. of member 1: `[FILL HERE]`
+Student Name of member 1: `Mohammadreza Abdi`
+Student No. of member 1: `97110285`
 
-Student Name of member 2: `[FILL HERE]`
-Student No. of member 2: `[FILL HERE]`
+Student Name of member 2: `Alireza Ilami`
+Student No. of member 2: `97101286`
 
-- [ ] Read Session Contents.
+- [x] Read Session Contents.
 
 ### Section 4.4.1
-- [ ] Investigate the ps command
-    1. [ ] `[FILL HERE with an image of ps command showing running processes.]`
+- [x] Investigate the ps command
     
-- [ ] Infromation about processes with PID = 1
-    1. [ ] `[FILL HERE with description.]`
+    ![image](https://user-images.githubusercontent.com/45341111/128358902-9bf2cbe6-f853-4459-a79d-8af64f3a97a0.png)
+    
+- [x] Infromation about processes with PID = 1
+    
+    این پردازه به طور کلی وظیفه مدیریت سیستم و سرویس های آن را بر عهده دارد. هدف اصلی این پردازه، پیکربندی کردن سرویس های هسته لینوکس در بین توزیع های مختلف است. همچنین این پردازه سرویس هایی برای راه اندازی و مدیریت فضای کاربر در هنگام بوت شدن سیستم شروع می کند.  
+    
+    (`/etc/systemd/system` به عنوان مثال در مسیر) هنگام بوت شدن سیستم عامل، مولفه های این پردازه از چندین فایل متنی ساخته می شود
+    سپس این پردازه شروع به بالا آوردن سرویس ها و پردازه های دیگر می کند
 
-- [ ] Program using getpid
-    1. [ ] `[FILL HERE with your program code.]`
+
+(‍`/etc/systemd/system` به عسبیمثال در مسیر)
+- [x] Program using getpid
+
+```c #include <stdio.h>
+#include <unistd.h>
+
+int main(){
+   printf("current process id: %d\n", getpid());
+   return 0;
+}
+```
 
 ### Section 4.4.2
 
