@@ -151,9 +151,42 @@ int main(){
     }
     ```
 
-- [ ] Program for the last task of this section
-    1. [ ] `[FILL HERE with your source code]`
-    1. [ ] `[FILL HERE with you description of the output`]
+- [x] Program for the last task of this section
+    
+    ```c
+    #include <stdio.h>
+    #include <sys/wait.h>
+    #include <unistd.h>
+    int main() {
+        fork();
+        printf("after first fork.\n");
+        fork();
+        printf("after second fork.\n");
+        fork();
+        printf("after third fork.\n");
+        return 0;
+    }
+    ```
+    ![image](https://user-images.githubusercontent.com/45341111/128392132-e29c5b67-17bc-4edc-a247-b934a9d9899e.png)
+    
+    <div dir="rtl">
+    
+    همانطور که مشاهده می شود، بعد از اولین
+    fork
+    در کل دو پردازه داریم، بنابراین رشته
+    after first fork
+    دو بار چاپ می شود.
+    حال هر کدام از دو پردازه، یک پردازه دیگر بعد از دومین 
+    fork
+    ایجاد می کنند. بنابراین رشته
+    after second fork
+    چهار بار چاپ می شود. بدین ترتیب هر کدام از چهار پردازه یک بار دیگر 
+    fork
+    را اجرا میکنند و در کل رشته
+    after third fork
+    هشت بار چاپ می شود لذا در نهایت 8 پردازه در برنامه ساخته خواهند شد.
+    
+    </div>
 
 ## Section 4.4.3
 
@@ -194,7 +227,7 @@ int main(){
     سایر اطلاعاتی را در ارتباط با مقدار برگردانده شده از فرزند یا تعداد سیگنال های توقف به آن را بدست آورد.
    </div>
 
-- [ ] Program showing process adoption
+- [x] Program showing process adoption
     
     ```c
     #include <stdio.h>
