@@ -109,17 +109,17 @@ int main(){
         int ret = fork();
         int tmp = 0;
         if (ret == 0) {
-                printf("tmp value 1 in child process: %d\n", tmp);
-                tmp += 10;
-                printf("tmp value 2 in child process: %d\n", tmp);
-                return 23;
+            printf("tmp value 1 in child process: %d\n", tmp);
+            tmp += 10;
+            printf("tmp value 2 in child process: %d\n", tmp);
+            return 23;
         } else {
-                int rc = 0;
-                wait(&rc);
-                printf("tmp value 1 in parent process: %d\n", tmp);
-                tmp += 10;
-                printf("tmp value 2 in parent process: %d\n", tmp);
-                printf("return code is %d\n", WEXITSTATUS(rc));
+            int rc = 0;
+            wait(&rc);
+            printf("tmp value 1 in parent process: %d\n", tmp);
+            tmp += 10;
+            printf("tmp value 2 in parent process: %d\n", tmp);
+            printf("return code is %d\n", WEXITSTATUS(rc));
         }
         return 0;
     }
@@ -130,8 +130,26 @@ int main(){
      بعد از اجرای پردازه فرزند، در پردازه پدر قابل مشاهده نمی باشد، چرا پشته ی پردازه های پدر و فرزند مستقل از یک دیگر هستند.
    </div>
 
-- [ ] Program printing different messages for parent and child process
-    1. [ ] `[FILL HERE with your source code]`
+- [x] Program printing different messages for parent and child process
+    
+    ```c
+    include <stdio.h>
+    #include <sys/wait.h>
+    #include <unistd.h>
+    int main() {
+        int ret = fork();
+        if (ret == 0) {
+            printf("I am the child.\n");
+            return 23;
+        } else {
+            printf("I am the parent.\n");
+            int rc = 0;
+            wait(&rc);
+            printf("return code is %d\n", WEXITSTATUS(rc));
+        }
+        return 0;
+    }
+    ```
 
 - [ ] Program for the last task of this section
     1. [ ] `[FILL HERE with your source code]`
@@ -139,9 +157,42 @@ int main(){
 
 ## Section 4.4.3
 
-- [ ] Program using `wait` and counting from 1 to 100
-    1. [ ] `[FILL HERE with your source code]`
-    1. [ ] `[FILL HERE about description for the parameter of wait system call]`
+- [x] Program using `wait` and counting from 1 to 100
+   
+    ```c
+    #include <stdio.h>
+    #include <sys/wait.h>
+    #include <unistd.h>
+    #include <stdlib.h>
+    int main() {
+        int pid = fork();
+        if (pid == 0) {
+            for (int i=1; i<=100; i++)
+                printf("%d\n", i);
+            exit(0);
+        } else {
+            wait(NULL);
+            printf("child execution is finished.\n");
+        }
+        return 0;
+    }
+    ```
+    
+   <div dir="rtl">
+   پارامتر اول تابع
+    wait
+    یک پوینتر به یک متغیری از نوع 
+    int
+     است که بعد از پایان یافتن اجرای پردازه فرزند، مقداری را در آن متغیر قرار می دهد که می توان با استفاده از ماکروهایی مانند
+    WIFEXITED
+    یا 
+    WIFSIGNALED
+    نحوه خاتمه یافتن فرزند را متوجه شد و یا با استفاده از سایر ماکروهایی مانند
+    WEXITSTATUS
+    یا
+    WSTOPSIG
+    سایر اطلاعاتی را در ارتباط با مقدار برگردانده شده از فرزند یا تعداد سیگنال های توقف به آن را بدست آورد.
+   </div>
 
 - [ ] Program showing process adoption
     1. [ ] `[FILL HERE with your source code]`
