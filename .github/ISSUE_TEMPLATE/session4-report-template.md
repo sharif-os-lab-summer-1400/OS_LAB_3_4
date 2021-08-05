@@ -195,8 +195,29 @@ int main(){
    </div>
 
 - [ ] Program showing process adoption
-    1. [ ] `[FILL HERE with your source code]`
-    1. [ ] `[FILL HERE an image from execution of your program]`
+    
+    ```c
+    #include <stdio.h>
+    #include <sys/wait.h>
+    #include <unistd.h>
+    #include <stdlib.h>
+    int main() {
+        int pid = fork();
+        if (pid == 0) {
+            printf("child's parent PID:%d\n", getppid());
+            sleep(2);
+            printf("child's parent PID:%d\n", getppid());
+            exit(0);
+        } else {
+            printf("parent PID:%d\n", getpid());
+            sleep(1);
+            printf("parent with PID %d finished.\n", getpid());
+        }
+        return 0;
+    }
+    ```
+    
+    ![image](https://user-images.githubusercontent.com/45341111/128388086-5e1e93fe-afca-4c0b-a5fe-4e395f20093c.png)
 
 ### Section 4.4.4
 
