@@ -254,15 +254,70 @@ int main(){
 
 ### Section 4.4.4
 
-- [ ] Describe following commands/APIs:
-    1. `[FILL HERE with description about execv]`
-    1. `[FILL HERE with description about execl]`
-    1. `[FILL HERE with description about execvp]`
-    1. `[FILL HERE with description about execlp]`
+- [x] Describe following commands/APIs:
+    1. 
+    ```c 
+    int execv(const char *path, char *const argv[]);
+    ```
+    <div dir="rtl">
+     این دستور آدرس برنامه و لیستی از آرگومان های ورودی (در قالب رشته) را گرفته و آن برنامه را اجرا می کند.
+    </div>
 
-- [ ] Program which forks and executues `ls` command
-    1. [ ] `[FILL HERE with your source code]`
-    1. [ ] `[FILL HERE an image from execution of your program]`
+    2.
+    ```c 
+    int execl(const char *path, const char *arg, ...);
+    ```
+    <div dir="rtl">
+    این دستور دقیقا همانند
+    execv
+    می باشد. تنها با این تفاوت که به جای گرفتن لیستی از آرگومان ها، آن آرگومان ها را به صورت رشته های جدا از هم دریافت می کند. 
+    </div>
+    
+    3.
+    ```c 
+    int execvp (const char *filename, char *const argv[]);
+    ```
+    <div dir="rtl">
+    این دستور دقیقا همانند
+    execv
+    لیستی از آرگومان ها به همراه آدرس برنامه را دریافت میکند.
+    تنها با این تفاوت که هنگام دریافت آدرس برنامه، اگر 
+    filename
+    با / شروع نشود (فقط نام فایل باشد)، آدرس آن را از طریق گشتن در متغیر محیطی استاندارد 
+    PATH
+    پیدا کرده و سپس آن را اجرا می کند.
+    در غیر این صورت همانند 
+    execv
+    عمل می کند.
+    </div>
+    
+    4.
+    ```c 
+    int execlp (const char *filename, const char *arg, ...);
+    ```
+    <div dir="rtl">
+    این دستور دقیقا همانند
+    execvp
+    می باشد. تنها با این تفاوت که به جای گرفتن لیستی از آرگومان ها، آن آرگومان ها را به صورت رشته های جدا از هم دریافت می کند. 
+    </div>
+
+- [x] Program which forks and executues `ls` command
+    
+    ```c
+    #include <stdio.h>
+    #include <sys/wait.h>
+    #include <unistd.h>
+    int main() {
+        int pid = fork();
+        if (pid == 0) {
+                execl("/bin/ls", "ls", "-g", "-h");
+        } else {
+                wait(NULL);
+        }
+        return 0;
+    }
+    ```
+    ![image](https://user-images.githubusercontent.com/45341111/128397572-306ab082-a7e2-49d6-bf3c-af9acac6d77b.png)
 
 ## Source Code Submission
 
