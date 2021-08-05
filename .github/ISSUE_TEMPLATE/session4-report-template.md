@@ -32,7 +32,7 @@ Student No. of member 2: `97101286`
     همچنین این پردازه سرویس هایی برای راه اندازی و مدیریت فضای کاربر در هنگام بوت شدن سیستم شروع می کند.  
     
     هنگام بوت شدن سیستم عامل، مولفه های این پردازه از چندین فایل متنی ساخته می شود
-     (`/etc/systemd/system` به عنوان مثال در مسیر) 
+     (/etc/systemd/system به عنوان مثال در مسیر) 
     سپس این پردازه شروع به بالا آوردن سرویس ها و پردازه های دیگر می کند
 </div>
 
@@ -51,10 +51,28 @@ int main(){
 ### Section 4.4.2
 
 
-- [ ] Program using getppid
-    1. [ ] `[FILL HERE with your program code.]`
-    1. [ ] `[FILL HERE with descriptions about the parent process]`
-    1. [ ] `[FILL HERE with an image of the program execution]`
+- [x] Program using getppid
+    1. [x] 
+    ```c 
+    #include <stdio.h>
+    #include <unistd.h>
+
+    int main(){
+       printf("current process id: %d\n", getpid());
+       return 0;
+    }
+    ```
+    1. [x] 
+    <div dir="rtl">
+   
+   .می باشد bash پردازه پدر
+   
+   .این پردازه همان ترمینال می باشد و دستوراتی را که کاربر در آن وارد می کند، اجرا می کند
+   
+   .خواهد بود bash اجرا شده، بنابراین پردازه پدر همان bash از آن جایی که دستوری کامپایل و اجرای کد در 
+   </div>
+    
+   1. [x] ![image](https://user-images.githubusercontent.com/45341111/128375348-d30122e8-f6ee-425a-bc99-fc3a3492faec.png)
 
 - [ ] Describe the C program (fork program)
     1. [ ] `[FILL HERE with descriptions]`
