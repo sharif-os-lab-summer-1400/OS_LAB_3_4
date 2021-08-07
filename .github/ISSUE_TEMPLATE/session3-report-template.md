@@ -76,15 +76,17 @@ Student No. of member 2: `97101286`
 - [x] Place your source code for a program that shows details of memory management sub-system:
     - [x] `[FILL HERE with you source code]`
 
-- [ ] Write your description about five important files at /proc/sys/kernel:
-    - [ ] `[FILL HERE with you descript for 1st file]`
-    - [ ] `[FILL HERE with you descript for 2nd file]`
-    - [ ] `[FILL HERE with you descript for 3rd file]`
-    - [ ] `[FILL HERE with you descript for 4th file]`
-    - [ ] `[FILL HERE with you descript for 5th file]`
-
+- [x] Write your description about five important files at /proc/sys/kernel:
+    - [x] dmesg_restrict: This toggle indicates whether unprivileged users are prevented from using dmesg(8) to view messages from the kernel’s log buffer. When dmesg_restrict is set to 0 there are no restrictions. When dmesg_restrict is set to 1, users must have CAP_SYSLOG to use dmesg(8).
+    - [x] domainname: These files can be used to set the NIS/YP domainname of your box in exactly the same way as the command domainname.
+    - [x] bootloader_type: This gives the bootloader type number as indicated by the bootloader, with a brief encoding for matching kernel header.
+    - [x] ngouprs_max: Maximum number of supplementary groups, _i.e._ the maximum size which setgroups will accept.
+    - [x] panic: The value in this file determines the behaviour of the kernel on a panic: if zero, the kernel will loop forever; if negative, the kernel will reboot immediately; if positive, the kernel will reboot after the corresponding number of seconds. When you use the software watchdog, the recommended setting is 60.
+    - [x] pid_max: PID allocation wrap value. When the kernel’s next PID value reaches this value, it wraps back to a minimum PID value. PIDs of value pid_max or larger are not allocated.
+    - [x] threads_max: This value controls the maximum number of threads that can be created using fork(). minimum is 1, maximum is given by the constant FUTEX_TID_MASK (0x3fffffff)
+    
 - [ ] Write your description about /proc/self file
-    - [ ] `[FILL HERE with you description]`
+    - [ ] /proc/self is a real symbolic link to the /proc/ subdirectory of the process that is making the call. It is not really a folder, it is a device driver (more accurately, a kernel module) exposing itself as a folder when someone wants to access it. Basically, /proc/self/ represents the process that's reading /proc/self/. So if you try to open /proc/self/ from a C program then it represents that program. If you try to do it from the shell then it is the shell etc.. 
 
 
 ## Source Code Submission
