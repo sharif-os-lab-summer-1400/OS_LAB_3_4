@@ -25,7 +25,7 @@ Student No. of member 2: `97101286`
 
 ### Section 3.3.2
 
-- [ ] Do 5 subtasks from 1 to 5:
+- [x] Do 5 subtasks from 1 to 5:
     1. [x] ![image](https://user-images.githubusercontent.com/45389577/127737698-699a0dcf-bb32-44f6-9123-28c5d26e0434.png)
         در اینجا ورژن هسته لینوکس، نام کاربری که آن را نصب کرده است، ورژن جی سی سی، نسخه دبینی که جی سی سی روی آن نصب شده است، و زمان کامپایل کرنل لینوکس را میتوان دید.
     2. [x] ![image](https://user-images.githubusercontent.com/45389577/127744249-8400d791-efdd-418b-86d7-5af625cc2a16.png)
@@ -76,7 +76,7 @@ Student No. of member 2: `97101286`
     - [x] ![image](https://user-images.githubusercontent.com/45389577/128610436-feed78b1-5a74-4355-a3e3-859ecdb72a55.png)`
 
 - [x] Place your source code for a program that shows details of memory management sub-system:
-    - [x] `[FILL HERE with you source code]`
+    - [x] ![image](https://user-images.githubusercontent.com/45389577/128611716-2cfbef81-56b4-4b95-9fe6-757e970507c5.png)
 
 - [x] Write your description about five important files at /proc/sys/kernel:
     - [x] dmesg_restrict: This toggle indicates whether unprivileged users are prevented from using dmesg(8) to view messages from the kernel’s log buffer. When dmesg_restrict is set to 0 there are no restrictions. When dmesg_restrict is set to 1, users must have CAP_SYSLOG to use dmesg(8).
