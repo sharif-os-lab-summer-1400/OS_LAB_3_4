@@ -57,21 +57,21 @@ Student No. of member 2: `97101286`
 ### Section 3.3.4
 
 - [ ] Write (in English or Persian) about each file in /proc/ directory:
-    1. `[FILL HERE with description about meminfo]`
-    1. `[FILL HERE with description about version]`
-    1. `[FILL HERE with description about uptime]`
-    1. `[FILL HERE with description about stat]`
-    1. `[FILL HERE with description about mount]`
-    1. `[FILL HERE with description about net directory (or file)]`
-    1. `[FILL HERE with description about loadavg]`
-    1. `[FILL HERE with description about interrupts]`
-    1. `[FILL HERE with description about ioports]`
-    1. `[FILL HERE with description about filesystem]`
-    1. `[FILL HERE with description about cpuinfo]`
-    1. `[FILL HERE with description about cmdline]`
+    1. meminfo: information about memory. such as total memory, cached mem, available mem, swap mem, etc.
+    1. version: As mentioned in task 3.3.2.1
+    1. uptime: As mentioned in task 3.3.2.2
+    1. stat: CPU statistical info. how much time each cpu has spent on performing different works. the first line is the sum of all cpu blocks. when the system restarts, all these values start from 0 again.
+    1. mounts: The 1st column specifies the device that is mounted. The 2nd column reveals the mount point. The 3rd column tells the file-system type. The 4th column tells you if it is mounted read-only (ro) or read-write (rw). The 5th and 6th columns are dummy values designed to match the format used in /etc/mtab.
+    1. net: This shows various networking parameters and statisticse.g. /dev shows all network devices. /route shows kernet routing table, etc.
+    1. loadavg: load average to both CPU and IO over time. The first three columns measure CPU and IO utilization of the last one, five, and 15 minute periods. The fourth column shows the number of currently running processes and the total number of processes. The last column displays the last process ID used. 
+    1. interrupts: recording number of interrupts per IRQ. Showing the type of interrupt, device name, num of interrupts per CPU, etc.
+    1. ioports: a list of currently registered port regions used for io communication with a device.
+    1. filesystem: a special filesystem which lists all filesystems that arr currently supported by the kernel. It does not exist on a disk.
+    1. cpuinfo: information about CPU. CPU type, Frequency, num of CPUs that are currently present, cpu cores, cache size, etc.
+    1. cmdline: Containing commandline of the kernel. showing parameters passed to the kernel at the time it started.
 
 - [ ] Place your source code for a program that shows details of processor:
-    - [ ] `[FILL HERE with you source code]`
+    - [ ] ![image](https://user-images.githubusercontent.com/45389577/128610436-feed78b1-5a74-4355-a3e3-859ecdb72a55.png)`
 
 - [ ] Place your source code for a program that shows details of memory management sub-system:
     - [ ] `[FILL HERE with you source code]`
