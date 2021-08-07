@@ -15,6 +15,8 @@ Student No. of member 1: `97110285`
 Student Name of member 2: `Alireza Ilami`
 Student No. of member 2: `97101286`
 
+NOTE: All of the cpp codes are submitted in a zip file at the end of the template. Although, I have put their screenshots for easier access.
+
 - [x] Read Session Contents.
 
 ### Section 3.3.1
