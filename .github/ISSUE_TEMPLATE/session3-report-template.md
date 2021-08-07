@@ -85,12 +85,13 @@ Student No. of member 2: `97101286`
     - [x] pid_max: PID allocation wrap value. When the kernel’s next PID value reaches this value, it wraps back to a minimum PID value. PIDs of value pid_max or larger are not allocated.
     - [x] threads_max: This value controls the maximum number of threads that can be created using fork(). minimum is 1, maximum is given by the constant FUTEX_TID_MASK (0x3fffffff)
     
-- [ ] Write your description about /proc/self file
-    - [ ] /proc/self is a real symbolic link to the /proc/ subdirectory of the process that is making the call. It is not really a folder, it is a device driver (more accurately, a kernel module) exposing itself as a folder when someone wants to access it. Basically, /proc/self/ represents the process that's reading /proc/self/. So if you try to open /proc/self/ from a C program then it represents that program. If you try to do it from the shell then it is the shell etc.. 
+- [x] Write your description about /proc/self file
+    - [x] /proc/self is a real symbolic link to the /proc/ subdirectory of the process that is making the call. It is not really a folder, it is a device driver (more accurately, a kernel module) exposing itself as a folder when someone wants to access it. Basically, /proc/self/ represents the process that's reading /proc/self/. So if you try to open /proc/self/ from a C program then it represents that program. If you try to do it from the shell then it is the shell etc.. 
 
 
 ## Source Code Submission
 
 please submit all your codes in a zip file
 
- - [ ] `Zip File HERE`
+ - [x] [OSLab3-Source_codes.zip](https://github.com/mohammadrezaabdi/OS_LAB_3_4/files/6949634/OSLab3-Source_codes.zip)
+
