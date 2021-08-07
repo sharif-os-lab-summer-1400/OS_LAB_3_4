@@ -56,7 +56,7 @@ Student No. of member 2: `97101286`
 
 ### Section 3.3.4
 
-- [ ] Write (in English or Persian) about each file in /proc/ directory:
+- [x] Write (in English or Persian) about each file in /proc/ directory:
     1. meminfo: information about memory. such as total memory, cached mem, available mem, swap mem, etc.
     1. version: As mentioned in task 3.3.2.1
     1. uptime: As mentioned in task 3.3.2.2
@@ -70,11 +70,11 @@ Student No. of member 2: `97101286`
     1. cpuinfo: information about CPU. CPU type, Frequency, num of CPUs that are currently present, cpu cores, cache size, etc.
     1. cmdline: Containing commandline of the kernel. showing parameters passed to the kernel at the time it started.
 
-- [ ] Place your source code for a program that shows details of processor:
-    - [ ] ![image](https://user-images.githubusercontent.com/45389577/128610436-feed78b1-5a74-4355-a3e3-859ecdb72a55.png)`
+- [x] Place your source code for a program that shows details of processor:
+    - [x] ![image](https://user-images.githubusercontent.com/45389577/128610436-feed78b1-5a74-4355-a3e3-859ecdb72a55.png)`
 
-- [ ] Place your source code for a program that shows details of memory management sub-system:
-    - [ ] `[FILL HERE with you source code]`
+- [x] Place your source code for a program that shows details of memory management sub-system:
+    - [x] `[FILL HERE with you source code]`
 
 - [ ] Write your description about five important files at /proc/sys/kernel:
     - [ ] `[FILL HERE with you descript for 1st file]`
