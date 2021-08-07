@@ -38,21 +38,21 @@ Student No. of member 2: `97101286`
 
 ## Section 3.3.3
 
-- [ ] Write (in English or Persian) about each file in /proc/(PID) directory:
-    1. `[FILL HERE with description about cmdline]`
-    1. `[FILL HERE with description about environ]`
-    1. `[FILL HERE with description about stat]`
-    1. `[FILL HERE with description about status]`
-    1. `[FILL HERE with description about statm]`
-    1. `[FILL HERE with description about cwd]`
-    1. `[FILL HERE with description about exe]`
-    1. `[FILL HERE with description about root]`
+- [x] Write (in English or Persian) about each file in /proc/(PID) directory:
+    1. cmdline: if the process has parent and is not a zombie, this file contains the complete command line for the process.
+    1. environ: when the process was started executing, the initial environment is set. all environment variables are listed in environ. the output is more clear with "strings" command. 
+    1. stat: as its name, it shows the status information of the process. This file shows a lot of num,bers which they have a specific meaning by their order. for example one boolean number says whether this process is running or not. Or so others say if the file is a zombie or stopped or sleeping or etc.
+    1. status: There are two files: sts and ststm. the status file is a combination of both, in a more human-readle language and format.
+    1. statm: Shows the status of the process which is related to the memory usage. like shared pages, total memory usage, resident set size, etc.
+    1. cwd: current working directory. similar to pwd. This is a symbolic link.
+    1. exe: This file is a symbolic link to the actual pathname of the executed command. If you open it, it opens an executable file.
+    1. root: We have a per-process root of the filesystem in linux kernel. this file references to the process's root directory. and works line the exe file.
 
-- [ ] Place your script for shwoing PID of running porcesses and their name here:
-    - [ ] `[FILL HERE with you script]`
+- [x] Place your script for shwoing PID of running porcesses and their name here:
+    - [x] ![image](https://user-images.githubusercontent.com/45389577/128609125-f7a812fd-b7a3-4758-a9cc-0e0d45a7150e.png)
 
-- [ ] Place your source code for a program that shows details of a program by receiving PID:
-    - [ ] `[FILL HERE with you source code]`
+- [x] Place your source code for a program that shows details of a program by receiving PID:
+    - [x] ![image](https://user-images.githubusercontent.com/45389577/128608873-3c089e0f-137d-40fb-8d41-bffa3629773f.png)
 
 ### Section 3.3.4
 
